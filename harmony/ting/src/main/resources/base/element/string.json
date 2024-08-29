@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "TingAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "TingAbility_label",
+      "value": "label"
+    }
+  ]
+}

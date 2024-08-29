@@ -1,5 +1,5 @@
 {
-  "name": "@baronha/ting",
+  "name": "@react-native-oh-tpl/ting",
   "version": "1.2.2",
   "description": "test",
   "main": "lib/commonjs/index",
@@ -8,19 +8,12 @@
   "react-native": "src/index",
   "source": "src/index",
   "files": [
+    "harmony",
     "src",
     "lib",
-    "android",
-    "ios",
     "cpp",
     "*.podspec",
     "!lib/typescript/example",
-    "!ios/build",
-    "!android/build",
-    "!android/gradle",
-    "!android/gradlew",
-    "!android/gradlew.bat",
-    "!android/local.properties",
     "!**/__tests__",
     "!**/__fixtures__",
     "!**/__mocks__",
@@ -41,13 +34,12 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/baronha/ting",
-  "author": "Baron Ha. <baronn.ha@gmail.com> (https://github.com/baronha)",
+  "repository": "https://github.com/react-native-oh-library/ting",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/baronha/ting/issues"
+    "url": "https://github.com/react-native-oh-library/ting/issues"
   },
-  "homepage": "https://github.com/baronha/ting#readme",
+  "homepage": "https://github.com/react-native-oh-library/ting#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -156,9 +148,12 @@
       ]
     ]
   },
-  "codegenConfig": {
-    "name": "RNTingSpec",
-    "type": "modules",
-    "jsSrcsDir": "src"
+  "harmony": {
+    "alias": "@baronha/ting",
+    "codegenConfig": {
+      "specPaths": [
+        "./src"
+      ]
+    }
   }
 }
