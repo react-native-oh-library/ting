@@ -1,0 +1,7 @@
+{
+  module: {
+    name: 'ting',
+    type: 'har',
+    deviceTypes: ['default'],
+  },
+}

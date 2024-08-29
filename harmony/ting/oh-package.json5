@@ -1,0 +1,12 @@
+{
+  license: 'MIT',
+  types: '',
+  name: '@react-native-oh-tpl/ting',
+  description: '',
+  main: 'index.ets',
+  type: 'module',
+  version: '1.2.2',
+  dependencies: {
+    "@rnoh/react-native-openharmony": 'file:../react_native_openharmony'
+  },
+}
