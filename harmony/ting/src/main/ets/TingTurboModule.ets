@@ -58,9 +58,6 @@ function buildToast(toastOptions: ToastOptions) {
           .fillOpacity(0)
           .stroke(Color.Green)
           .strokeWidth(4)
-        // .transition(TransitionEffect.asymmetric(TransitionEffect.opacity(0)
-        //   .animation({ curve: Curve.Sharp }),
-        //   TransitionEffect.move(TransitionEdge.BOTTOM).animation({ curve: Curve.Sharp })))
       } else if (toastOptions.preset === 'none') {
         // there is no component.
       } else {
@@ -157,9 +154,6 @@ function buildAlert(alertOptions: AlertOptions) {
           .stroke(Color.Green)
           .strokeWidth(7)
           .margin({ top: 15 })
-        // .transition(TransitionEffect.asymmetric(TransitionEffect.opacity(0)
-        //   .animation({ curve: Curve.Sharp }),
-        //   TransitionEffect.move(TransitionEdge.BOTTOM).animation({ curve: Curve.Sharp })))
       } else if (alertOptions.preset === 'none') {
         Blank()
           .height('25px')
