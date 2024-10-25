@@ -28,7 +28,6 @@ import { ComponentContent, PromptAction, promptAction, window } from '@kit.ArkUI
 import { ToastOptions, AlertOptions, Options } from './Type';
 import { vibrator } from '@kit.SensorServiceKit';
 import { common2D, drawing } from '@kit.ArkGraphics2D';
-import Logger from "./Logger";
 
 @Builder
 function buildToast(toastOptions: ToastOptions) {
@@ -231,6 +230,8 @@ export class TingTurboModule extends TurboModule implements TM.Ting.Spec {
   private isCancelled: boolean = false;
   private toastOptionInit: ToastOptions | undefined = undefined;
   private alertOptionInit: AlertOptions | undefined = undefined;
+  private PREFIX = "asset://";
+  private RAWFILE_PREFIX = "resource://RAWFILE/assets/";
 
   async showToast(toastOptions: ToastOptions) {
     if (this.toastOptionInit) {
@@ -349,6 +350,10 @@ export class TingTurboModule extends TurboModule implements TM.Ting.Spec {
         toastOptions.icon.tintColor = this.hexToRGBA(toastOptions.icon?.tintColor as string);
       }
 
+      if (toastOptions.icon?.uri) {
+        toastOptions.icon!.uri = this.modifyPathIfNeeded(toastOptions.icon?.uri as string);
+      }
+
       this.showToast(toastOptions);
     }
   }
@@ -359,6 +364,10 @@ export class TingTurboModule extends TurboModule implements TM.Ting.Spec {
 
       if (alertOptions.icon?.tintColor) {
         alertOptions.icon.tintColor = this.hexToRGBA(alertOptions.icon?.tintColor as string);
+      }
+
+      if (alertOptions.icon?.uri) {
+        alertOptions.icon!.uri = this.modifyPathIfNeeded(alertOptions.icon?.uri as string);
       }
 
       this.showAlert(alertOptions);
@@ -494,5 +503,12 @@ export class TingTurboModule extends TurboModule implements TM.Ting.Spec {
     }
 
     throw new Error('Invalid hex color');
+  }
+
+  modifyPathIfNeeded(path: string): string {
+    if (path.startsWith(this.PREFIX)) {
+      return this.RAWFILE_PREFIX + path.slice(this.PREFIX.length);
+    }
+    return path;
   }
 }
