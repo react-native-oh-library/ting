@@ -1,0 +1,11 @@
+[
+    {
+        "Name": "ting",
+        "License": "MIT License",
+        "License File": "https://github.com/baronha/ting/blob/main/LICENSE",
+        "Version Number": "1.2.2-0.0.3",
+        "Owner" : "xiafeng@huawei.com",
+        "Upstream URL": "https://github.com/baronha/ting",
+        "Description": "test"
+    }
+]
