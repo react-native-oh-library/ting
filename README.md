@@ -6,7 +6,7 @@
 
 [中文 / Chinese](https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/baronha-ting.md)
 
-[英文 / English](https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-en/baronha-ting.md)
+[英文 / English](https://gitee.com/react-native-oh-library/usage-docs/blob/master/en/baronha-ting.md)
 
 
 ## 请悉知 / Acknowledgements
